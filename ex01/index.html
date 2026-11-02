@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exercício de interação com JavaScript e DOM.">
+    <title>Exercício 01 | Painel interativo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main class="contentor">
+        <p class="etiqueta">Módulo 3 · Exercício 01</p>
+        <h1>Painel interativo</h1>
+        <p class="introducao">Usa JavaScript para alterar o conteúdo e o aspeto desta página.</p>
+
+        <section class="cartao" aria-labelledby="titulo-saudacao">
+            <h2 id="titulo-saudacao">Mensagem personalizada</h2>
+            <label for="nome">Como te chamas?</label>
+            <div class="linha-formulario">
+                <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Escreve o teu nome">
+                <button type="button" id="mostrar-saudacao">Mostrar mensagem</button>
+            </div>
+            <p id="mensagem" class="mensagem" aria-live="polite">A tua mensagem aparecerá aqui.</p>
+        </section>
+
+        <section class="cartao" aria-labelledby="titulo-tema">
+            <h2 id="titulo-tema">Aspeto da página</h2>
+            <p>Podes alternar entre o tema claro e o tema escuro sem recarregar a página.</p>
+            <div class="acoes">
+                <button type="button" id="alternar-tema" aria-pressed="false">Ativar tema escuro</button>
+                <button type="button" id="limpar" class="secundario">Limpar</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

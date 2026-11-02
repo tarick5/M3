@@ -1,0 +1,139 @@
+:root {
+    --fundo: #f4f7fb;
+    --cartao: #ffffff;
+    --texto: #172b4d;
+    --texto-suave: #52606d;
+    --primaria: #255fc8;
+    --borda: #d7e1ef;
+    --realce: #e8f0ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--texto);
+    background: var(--fundo);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+body.modo-noturno {
+    --fundo: #111b2e;
+    --cartao: #1d2b43;
+    --texto: #eef5ff;
+    --texto-suave: #bfd0e8;
+    --primaria: #7db1ff;
+    --borda: #3d5272;
+    --realce: #263b5d;
+}
+
+.contentor {
+    width: min(100% - 2rem, 720px);
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin: 0 0 0.6rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    color: var(--primaria);
+    background: var(--realce);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.introducao {
+    margin: 0.5rem 0 2rem;
+    color: var(--texto-suave);
+}
+
+.cartao {
+    margin-top: 1.25rem;
+    padding: 1.5rem;
+    border: 1px solid var(--borda);
+    border-radius: 0.9rem;
+    background: var(--cartao);
+    box-shadow: 0 10px 24px rgb(23 43 77 / 8%);
+}
+
+.cartao h2 {
+    margin-top: 0;
+}
+
+.linha-formulario,
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.45rem;
+}
+
+input {
+    flex: 1 1 14rem;
+    min-height: 2.8rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--borda);
+    border-radius: 0.45rem;
+    color: var(--texto);
+    background: var(--cartao);
+    font: inherit;
+}
+
+button {
+    min-height: 2.8rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--primaria);
+    border-radius: 0.45rem;
+    color: #ffffff;
+    background: var(--primaria);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+button:hover,
+button:focus-visible {
+    filter: brightness(0.9);
+}
+
+input:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgb(37 95 200 / 30%);
+    outline-offset: 2px;
+}
+
+.secundario {
+    color: var(--primaria);
+    background: transparent;
+}
+
+.mensagem {
+    min-height: 1.5rem;
+    margin: 1rem 0 0;
+    padding: 0.75rem;
+    border-radius: 0.45rem;
+    color: var(--texto-suave);
+    background: var(--realce);
+}
+
+@media (max-width: 500px) {
+    .contentor {
+        padding: 2.5rem 0;
+    }
+
+    .linha-formulario button,
+    .acoes button {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exercício de lista de tarefas com JavaScript e DOM.">
+    <title>Exercício 02 | Lista de tarefas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main class="contentor">
+        <p class="etiqueta">Módulo 3 · Exercício 02</p>
+        <h1>Lista de tarefas</h1>
+        <p class="introducao">Adiciona uma tarefa, marca-a como concluída ou elimina-a quando já não for necessária.</p>
+
+        <section class="cartao" aria-labelledby="titulo-nova-tarefa">
+            <h2 id="titulo-nova-tarefa">Nova tarefa</h2>
+            <form id="formulario-tarefa" novalidate>
+                <label for="texto-tarefa">Descrição</label>
+                <div class="linha-formulario">
+                    <input type="text" id="texto-tarefa" name="texto-tarefa" maxlength="100" placeholder="Ex.: Rever apontamentos" required>
+                    <button type="submit">Adicionar</button>
+                </div>
+                <p id="erro" class="erro" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="cartao" aria-labelledby="titulo-lista">
+            <div class="cabecalho-lista">
+                <h2 id="titulo-lista">As minhas tarefas</h2>
+                <p id="contador" aria-live="polite">0 tarefas por concluir</p>
+            </div>
+            <ul id="lista-tarefas" class="lista-tarefas"></ul>
+            <p id="estado-vazio" class="estado-vazio">Ainda não adicionaste tarefas.</p>
+        </section>
+    </main>
+</body>
+</html>
